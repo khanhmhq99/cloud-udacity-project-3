@@ -101,6 +101,7 @@ jobs:
           name: Ensure back-end infrastructure exists
           command: |
             aws cloudformation deploy \
+              --region us-east-1
               --template-file .circleci/files/backend.yml \
               --stack-name "udapeople-backend-nguyents2" \
               --parameter-overrides ID="nguyents2"  \
@@ -109,6 +110,7 @@ jobs:
           name: Ensure front-end infrastructure exist
           command: |
             aws cloudformation deploy \
+              --region us-east-1
               --template-file .circleci/files/frontend.yml \
               --stack-name "udapeople-frontend-nguyents2" \
               --parameter-overrides ID="nguyents2"  \
