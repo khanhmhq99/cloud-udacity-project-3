@@ -104,7 +104,7 @@ jobs:
               --template-file .circleci/files/backend.yml \
               --stack-name "udapeople-backend-nguyents2" \
               --parameter-overrides ID="nguyents2"  \
-              --tags project=udapeople
+              --tags project=udapeople \
               --region us-east-1
       - run:
           name: Ensure front-end infrastructure exist
@@ -113,7 +113,7 @@ jobs:
               --template-file .circleci/files/frontend.yml \
               --stack-name "udapeople-frontend-nguyents2" \
               --parameter-overrides ID="nguyents2"  \
-              --tags project=udapeople
+              --tags project=udapeople \
               --region us-east-1
 
       - run:
